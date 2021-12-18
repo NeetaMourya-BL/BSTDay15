@@ -17,8 +17,6 @@ public class BST{
     BST(){ 
         root = null; 
     } 
-    //delete a node from BST
-   
     int minValue(Node root)  { 
         //initially minval = root
         int minval = root.key; 
@@ -65,14 +63,6 @@ public class BST{
         } 
     } 
      
-    boolean search(int key)  { 
-        root = search_Recursive(root, key); 
-        if (root!= null)
-            return true;
-        else
-            return false;
-    } 
-   
     //recursive insert function
     Node search_Recursive(Node root, int key)  { 
         // Base Cases: root is null or key is present at root 
@@ -91,7 +81,17 @@ class Main{
     	BST bst=new BST();
         bst.insert(56); 
         bst.insert(30); 
+        bst.insert(22); 
+        bst.insert(40); 
+        bst.insert(11); 
+        bst.insert(3); 
+        bst.insert(16); 
         bst.insert(70); 
+        bst.insert(60); 
+        bst.insert(95); 
+        bst.insert(65); 
+        bst.insert(63); 
+        bst.insert(67); 
         //print the BST
         System.out.println("The BST Created with input data(Left-root-right):"); 
         bst.inorder(); 
