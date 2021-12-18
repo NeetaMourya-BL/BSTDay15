@@ -74,6 +74,13 @@ public class BST{
         // val is less than root's key 
         return search_Recursive(root.right, key); 
     } 
+    boolean search(int key)  { 
+        root = search_Recursive(root, key); 
+        if (root!= null)
+            return true;
+        else
+            return false;
+    } 
 }
 class Main{
     public static void main(String[] args)  { 
@@ -95,5 +102,8 @@ class Main{
         //print the BST
         System.out.println("The BST Created with input data(Left-root-right):"); 
         bst.inorder(); 
+        //search a key in the BST
+        boolean ret_val = bst.search (63);
+        System.out.println("\nKey 63 found in BST:" + ret_val );
      } 
 }
